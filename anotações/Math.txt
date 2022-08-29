@@ -1,0 +1,98 @@
+Math - de matematica
+
+Para que  possa arredondar o numero  para baixo, pra deixa um numero inteiro --- Math.floor
+
+usar o Math.floor(num1) para arrendondar para baixo
+ 
+code - let num1 = 9.54578;
+let num2 = Math.floor(num1)
+
+console.log(num2);
+
+vai sair - 9 no terminal
+
+-----------------------------------------
+arredondar para cima- Math.ceil
+
+code - let num2 = Math.ceil(num1); // arredondar par cima
+console.log(num2);
+
+vai sair 10 no terminal
+
+
+----------------------------------------
+arredondar para o mais proximo .round
+
+code - let num2 = Math.round(num1);
+console.log(num2);
+
+vai sair - 10 no terminal
+
+
+--------------------------------------------------------------
+utilizar o .max pegara o numero maior da sequencia
+
+code - console.log(Math.max(1,2,3,4,5, -10, -50, 1500, 9, 8 ,7 ,6));
+
+vai sair - 1500
+-----------------
+ para saber qual o menor utiliza o .min 
+console.log(Math.min(1,2,3,4,5, -10, -50, 1500, 9, 8 ,7 ,6));
+
+vai sair - -50
+
+-------------------------------
+para gerar numero aleatorio .random entre 0  e 1 mas o 1 nunca será incluido
+
+console;log(Math.random());
+
+
+-------------------------------
+para colocar aleatorio  mas com um numero determinado 
+
+exemp entre  10 e 5
+
+const aleatorio = Math.random() * (10 - 5) + 5;
+console.log(aleatorio);
+
+--------- pode ultizar para arredondar tbm  colocando o .round 
+
+const aleatorio = Math.round(Math.random() * (10 - 5) + 5);
+console.log(aleatorio);
+
+------------------------------------------------------------
+usar o Math.PI mostra o valor de PI
+
+console.log(Math.PI);
+
+
+------------------------------------------------------------
+Potencia  .pow
+
+console.log(Math.pow(2, 10); - 2 elevado a 10
+ 
+com o operador  é **
+console.log(2 ** 10);
+
+---------------------------------------------------------------
+para pega a raiz quadrada
+
+code - let num1 = 9;
+console.log(num1 ** (1/2)); ou  console.log(num1 ** 0.5);
+
+vai sair - 3 no terminal
+
+-------------------------------------------------------------------------
+pode se dividir por 0 no javascript em outra linguagm daria erro
+
+console.log(100/0); 
+não da erro e é avaliado como verdadeiro - 
+no terminal gerará um dado numerico como infinity
+
+utilize o !! para avaliar
+console.log(!! (100/0));
+
+---------------------------------------------
+.toFixed para usar casa decimais
+
+------------------------------

@@ -1,0 +1,115 @@
+Array - possa se imaginar como uma lista de coisas
+uma lista, uma coleção de coisas
+
+separar por tipos , se for nomes só nomes , melhor para se identificar, mas pode se colocar oque quiser no array pois o  javascript entende , mas também não é uma boa pratica de codar
+
+as string são indexsadas - tem indices
+
+		  0123456
+exemp: const nome = 'Nayara'
+
+os arrays tambem são indexsados para são diferentes, são por elementos
+                                           0          1             2
+exemp:const alunos = ['Luiz','Nayara', 'Maria']
+
+
+para identificar o indece 
+usar - console.log(alunos[0]); 
+vai sair - Luiz  ( no array)
+
+na string
+console.log(nome[0]); 
+vai sair ; N
+
+
+-----------------------------
+
+Posso editar um array
+
+const alunos = ['Luiz', 'Nayara', 'João'];
+alunos[0] = 'Eduador';
+console.log(alunos);
+
+vai sair - [ 'Eduador', 'Nayara', 'João' ]
+
+------------------------------
+Posso adicionar algo ao array tambem
+um jeito de adicionar é |
+alunos[3] = 'Luiza' - adicionando um indece que não tem 
+
+código:
+const alunos = ['Luiz', 'Nayara', 'João'];
+alunos[0] = 'Eduador';
+alunos[3] = 'Luiza'
+console.log(alunos);
+
+vai sair - [ 'Eduador', 'Nayara', 'João', 'Luiza' ]
+
+
+--Outro modo de adicionar é |
+alunos[alunos.length] = 'Luiza'; -- pode repetir
+
+-- Outra  forma usando .push
+alunos.push('Otavio'); --  pode repetir
+
+todos esses será adicionado ao final do array
+
+---- Para adicionar ao começo
+usa o .unshift
+
+alunos.unshift('Luiza'); - se adicionar outro o outro que ficará em primeiro
+
+--------para saber o indece usar .lenght--------------
+------------------------------------------------------------
+Para remover do fim do array  - remove tanto o indice quanto o elemento
+.pop
+
+alunos.pop('João')
+será removido do array
+
+para salvar o item removido , em uma variavel
+const removido = alunos.pop()
+e der um console.log(removido); irá mostra o item removido
+
+
+--- para remover do começo - altera o indice 
+.shift
+
+alunos.shift()
+
+
+
+---------------------------------------------------------
+Deletar um item   , mas não altera o indice
+
+delete alunos[1]
+
+vai sai - [ 'Luiz', <1 empty item>, 'João' ] - ficara um elemento vazio
+
+
+---------------------------------------
+acessar um indice que não existe - o javascript mostrará o valor undefined
+
+
+-----------------------------------------------
+
+adicionar mais dois e fatiar
+
+//                             0          1            2            3          4
+const alunos = ['Luiz', 'Nayara', 'João']; // Luiza, Eduardo
+alunos.push('Luiza');
+alunos.push('Eduardo');
+
+console.log(alunos.slice(0, 3));
+
+
+----------------------------------------------------
+
+o array e considerado um obcjet pelo o javascript
+
+usando typeof no console.log
+-----------
+mas para saber se realmente esta trabalhando com array 
+pode se usar o instanceof Array
+
+console.log(alunos instanceof Array); - retornará true or false

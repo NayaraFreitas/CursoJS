@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex; 
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-content: center; */
+    background: crimson;
+    /* height: 500px; */
+}
+
+.flex-item {
+    /* width: 100%; */
+    flex-grow: 1;
+    flex-basis: 320px;
+    height: 200px;
+    color: white;
+    background: yellowgreen;
+    /* margin: 10px; */
+}
+
+/*.flex-item:nth-child(3){
+    font-size: 40px;
+}*/

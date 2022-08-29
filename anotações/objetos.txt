@@ -1,0 +1,105 @@
+como agrupar sa variaveis - com o objeto 
+quando preciso criar um objeto eu abro as chaves
+
+exemp:
+const pessoal = {
+    nome: 'Nayara',
+    sobrenome: 'Freitas',
+    idade: 21
+};
+
+console.log(pessoa1.nome);
+console.log(pessoa1.sobrenome);
+conselo.log(pessoa1.idade);
+
+terminal- [Running] node "c:\CursoJS\JS\objetos.js"
+Nayara
+Freitas
+21
+
+--------------------------------------------------------
+-------quando passoa um valor para o parametro chama-se de argumento---------
+
+-------------------------------------------------------------
+criando objetos com function - facilita a vida- 
+
+		        --parametro--
+function criaPessoa (nome, sobrenome, idade) {
+    return {
+        nome: nome,
+        sobrenome: sobrenome,
+        idade: idade
+    };
+}
+			-argumento-
+const pessoa1 = criaPessoa ('Luiz', 'Otavio', 25);
+console.log(pessoa1.nome);
+
+---------------------------------------------------------------
+usando o metodo fala()
+
+const pessoa1 = {
+    nome: 'Nayara',
+    sobrenome:'Freitas',
+    idade: 21,
+
+    fala () {
+       console.log('Ola Mundo') 
+    }
+};
+
+pessoa1.fala();
+
+terminal - Ola Mundo
+
+----------------------------------------------------------------
+usando o this na fala
+
+const pessoa1 = {
+    nome: 'Nayara',
+    sobrenome:'Freitas',
+    idade: 21,
+
+    fala () {
+       console.log(`${this.nome} ${this.sobrenome} está falando oi...`) 
+    }
+};
+
+pessoa1.fala();
+
+terminal- Nayara Freitas está falando oi...
+
+-------------------------------------------------------------------
+incrementando com o this
+
+exemp:
+const pessoa1 = {
+    nome: 'Nayara',
+    sobrenome:'Freitas',
+    idade: 21,
+
+    fala () {
+       console.log(`${this.nome} ${this.sobrenome} minha idade é ${this.idade}.`) 
+    },
+
+    incrementaIdade() {
+        this.idade++;
+    }
+};
+
+pessoa1.fala();
+pessoa1.incrementaIdade ();
+pessoa1.fala();
+
+
+Terminal -
+ Nayara Freitas minha idade é 21.
+Nayara Freitas minha idade é 22.
+
+
+
+
+
+
+
+

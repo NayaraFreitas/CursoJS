@@ -1,0 +1,109 @@
+função executa ação
+ se usa function - tem que ter variavel
+
+
+para delimitar o corpousar chaves  e não precisa colocar ( ; ) 
+function saudacao ( ) {
+	
+}
+
+para chamar uma função precisa colocar parentes () - para que ela seja executada
+
+saudacao ();
+
+--------------------------------
+para criar parametro vai dentro do parentes da variavel da function
+
+function saudacao(nome) {
+}
+
+
+quando chamar a função falar  oque eu quero  referente ao que ta no parametro
+
+exemp: function saudacao(nome){
+    console.log(`Bom dia ${nome}!`);
+}
+
+saudacao('Nayara');
+
+vai sair - Bom dia Nayara! - no terminal
+
+posso colocar mais de uma vez   saudacao ('');
+
+--------------------------------------------------------
+salvar a variavel usando const  - se por a variavel saudacao em const e utilizar console.log mesmo usando no function vai sair no terminal o (bom dia nayara) mas tambem parecerá undefined  , para contornar isso usar o return
+
+exemp; function saudacao(nome){
+    console.log(`Bom dia ${nome}!`);
+    return 123456;
+}
+
+const variavel = saudacao('Nayara');
+console.log(variavel);
+
+terminal sem o return - [Running] node "c:\CursoJS\JS\funções.js"
+Bom dia Nayara!
+undefined
+
+com return -[Running] node "c:\CursoJS\JS\funções.js"
+Bom dia Nayara!
+123456
+
+---- Não é uma pratica boa usar return com algo completamente diferente 
+
+Melhor forma 
+function saudacao(nome){
+    return `Bom dia ${nome}!`;
+}
+
+const variavel = saudacao('Nayara');
+console.log(variavel);
+
+--
+A função pode ou não retornar valores 
+
+----------------------------------------------
+uma funçao para receber dois valores
+
+
+UMa função de que faz soma:
+function soma(x, y){
+    const resultado = x + y;
+    return resultado
+}
+ console.log(soma(2, 2));
+
+abaixo da palavra return , nada será mais executado , e como se fosse o ponto final da função 
+
+
+
+----------------------
+Não dá pra alterar ou mexer fora da função, do escopo
+
+
+-----------------------------------------------------------------
+posso criar uma função dentro de uma variavel , ai seria uma função anonima
+
+"const raiz = function () {
+
+};  - setiver uma atribuição (=) precisa terminar com (;)"
+
+
+exemp: const raiz = function (n) {
+    return n ** 0.5;
+};
+
+console.log(raiz(9))
+
+vai sair - 3 no terminal
+
+
+------------------------
+=> (arrow function) - simplifiicando a função
+
+const raiz = n => n ** 0.5;
+ 
+console.log(raiz(9));
+
+
+

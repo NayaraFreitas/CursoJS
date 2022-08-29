@@ -1,0 +1,111 @@
+Number
+
+
+------------------------------------------
+.toString( ) para converter para string o number
+
+
+no vscode
+let num1 = 1 ; //number
+let num2 = 2.5 ; //number
+
+console.log(num1 + num2);
+
+usando o .toString()
+
+console.log(num1.toString( ) + num2);
+
+--------------|
+para mudar definitivo para string naõ precisa por o console.log
+num1 = num1.toString();
+
+
+
+----------------------------------------------------------------------------
+typeof para saber se é string ou number
+
+
+----------------------------------------------------------------------------
+para colocar o number em numero binario
+
+let num1 = 1500 ; 
+console.log(num1.toString(2));
+
+vai sair = [Running] node "c:\CursoJS\JS\Numbers.js"
+10111011100
+
+----------------------------------------------------------------------------
+para não falar o numero inteiro é usado o .toFixed com a casa decimal
+let num1 = 10.5789551255547 ;
+console.log(num1.toFixed(2))
+
+vai sair = [Running] node "c:\CursoJS\JS\Numbers.js"
+10.58
+
+----------------------------------------------------------------------------
+para saber se o numero é inteiro , .isInteger
+
+console.log(Number.isInteger(num1));
+
+vai sair : true or false
+
+----------------------------------------------------------------------------
+quando aparecer NaN (not a number)  e por algo não saiu como esperado 
+
+
+exemp usado : let num1 = 10;             (Não tem como multiplicar                                                                        number com string)
+let temp = num1 * 'Olá';
+
+saiu= [Running] node "c:\CursoJS\JS\Numbers.js"
+NaN
+
+----------------------------------------------------------------------------
+para saber se o number é NaN
+
+console.log(Number.isNaN(temp));
+
+vai sair = true or false
+
+----------------------------------------------------------------------------
+// IEEE 754-2008
+let num1 = 0.7; //number
+let num2 = 0.1 ; //number
+
+
+// num1 = num1 + num2
+num1 += num2; //0.7...
+num1 += num2; //0.8...
+num1 += num2; //0.9...
+.
+num1 =  num1.toFixed(2); vai sair = 1.00
+
+console.log(num1);
+console.log(Number.isInteger(num1)); - para saber é inteiro vai sair false por conta dos numero binario que não aparecem no terminal
+
+se usar o parseFloat ele irá analisar a string e retonar um numero de ponto flutuante 
+
+num1 = parseFloat(num1.toFixed(2));
+console.log(num1);
+console.log(Number.isInteger(num1));
+
+vai sair - [Running] node "c:\CursoJS\JS\Numbers.js"
+1
+true
+
+--------------pode resolver o problema resolvendo  conta 
+
+num1 = ((num1 * 100) + (num2 * 100)) vai dar 80 por tanto e true
+
+num1 = ((num1 * 100) + (num2 * 100)) / 100; vai dar 0.8  por tanto false
+
+com a (function e var)  
+num1 = parseFloat(num1.toFixed(2));
+console.log(num1);
+console.log(Number.isInteger(num1));
+
+vai sair -[Running] node "c:\CursoJS\JS\Numbers.js"
+0.8
+false
+
+utilizar a conta tres vezes dará 1 que é true
+

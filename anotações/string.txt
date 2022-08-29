@@ -1,0 +1,107 @@
+String 
+
+- usar a barra a invertida \ como escape, só uma  se usar duas ira parecer no terminal a outra barra
+
+exemplo :let umaString = "Um \"texto\"  ";
+console.log(umaString)
+
+vai sair = Um "texto"
+
+
+------------------------
+Cada caractere tem um indice
+
+             01234567
+exep:   "Um texto"
+
+---Posso direcionar para aparecer um caractere pelo indice--- usando 
+[] no console.log
+
+exep: console.log(umaString [4]);
+vai sair = e (no terminal)
+
+se estive fora deste ranche será undefined
+
+
+---- pode se usar o charAt() para saber a posição
+exep: console.log(umaString.chartAt(6));
+
+
+----------------------
+concat = concatenar, mesma coisa que + 
+
+exep: console.log(umaString.concat('  em', 'um', 'lindo dia '))
+
+ira juntar  a string (Um texto) com esse outros no concat  
+
+|
+isso e mesma coisa que |
+console.log(umaString + ' em um lindo dia .');
+ /ou/
+console.log(`${umaString} em um lindo dia. `); -- Mais utilizado
+
+------------------------
+Para saber em qual indide se encontra a string
+usa se indexOf
+
+exep: console.log(umaString.indexOf('texto'));
+vai sair = 3
+
+--- similar ao indexOf  é o lastIndexOf , ele inverte a direção
+começa a contar o indice de trás para frente
+
+--------------------------------------------
+expressão regular - .match   com a flag -g - muda se usar sem o g
+
+exep: console.log(umaString.match(/[a-z]/g));
+vai sair - ['m', 't', 'e', 'x', 't', 'o',]
+
+ele retornar as letras que estão na strings
+
+ tem o .search tambem - similar ao indexOf mas e mais voltado para expressões regulares
+
+
+e tem tambem o .replace - que substitui a palavra , mas tambem pode ser usado como expressão regular usando /letra/
+
+ exep:console.log(umaString.replace(/r/ ,'#')); irá sobstituir apenas o primeiro r que aprecer
+
+vai sair = O #ato roeu a roupa do rei de roma ( string usada na video aula)
+
+----se usar a flag g vai repetir em todos os  R.
+
+
+---------------------------------------------------------------
+para saber o tamanho da string usando um atributo o length
+
+exep: console.log(umaString.length);
+
+-irá a paracer a quantidade de caracteres
+
+
+-----------------------------------------------------------------
+o .slice determina onde começa e onde termina a string , para fatiar
+
+exep: console.log(umaString.slice(2, 6) -usando os indices-
+
+---------------------------------------------------------------------
+.substring  pode ser usado tambem para fatiar , mas o código ficará maior pois irá utilizar o .length junto para usar em negativo
+
+exep: console.log(umString.substring(umaString.length -5, uma String.length -1));
+
+é mais facil substituir pelo .slice
+
+-----------------------------------
+se quiser dividir um string pode se usar o .split , cada indice indo para um array
+exep: console.log(umaString.split(' ')); - pode se coloca uam letra que ira ser tirada na saida e pode s terminar quantas vezes pode acontecer - exep: ('r', 2));
+
+vai sair = [ 'O', 'rato', 'roeu', 'a', 'roupa', 'do, 'rei', 'de', 'roma']
+
+--------------------------------------
+
+se eu quiser a string tudo maiuscula posso usar o .toUpperCase( )
+
+e se eu quiser minuscula posso usar .toLowerCase( )
+
+exep: console.log(umaString.toUpperCase( ));
+
+----------------------------------------------------------------------------

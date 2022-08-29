@@ -1,0 +1,19 @@
+document.body.inner	HTML = 'Qualquer coisa ' - ele incrementar algo ao body do html
+
+atalho para window.documet.body.innerHTML
+
+----- ele so incrementra , assim que usado ne novo e apagado que foi escrito antes , para incrementar o novo---
+
+o = e como o valor de recebe - atribuição
+
+-------------------------------------------------------------------------
+mudando o = para += para concatenar , então tudo que for escrito vai incrementar no body
+
+document.body.inner	HTML  += 'Qualquer coisa '        
+        
+e usando <br/> para quebrar linha
+	
+
+--------------------------------------------------------------------------
+
+${} -  so funcionar se string for com crase ``

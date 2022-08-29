@@ -1,0 +1,92 @@
+.heading {
+    transition: all 1s ease-in-out;
+}
+
+/* :hover para  surgir cor ao passar o cursor */
+
+ .heading:hover{
+    background: red;
+} 
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+/* :lnk para links não visitados */
+.A:link {
+    color: deeppink;
+}
+/* :visited para links ja visitados  */
+a:visited {
+    color: aqua;
+} 
+/* :activie para ao segurar  muda cor mostrando que esta ativo*/
+a:active {
+    color: cadetblue;
+    background: goldenrod;
+    text-decoration: none;
+}
+
+input:checked + p {
+    background: cyan;
+}
+
+input:not(checked) + p {
+    background: yellowgreen;
+}
+
+.pai .lista li:last-child {
+    background-color: brown;
+}
+ /*  usar o :not () quando quiser negar */
+
+ /* :nth-child(odd ou even ou 3n para contas) para identificar qual começar */
+
+ /* ul li:nth-child(odd) {
+    background-color: rgb(255, 0, 0);
+ }
+ ul li:nth-child(even) {
+     background-color: rgb(229, 0, 236);
+ }
+
+ ul li:nth-child(3n){
+    background-color: rgb(38, 0, 255);
+ }
+ ul li:nth-child(3n+5) {
+        background-color: rgb(0, 217, 255);
+ } */
+
+/* pseudo- clase : , pseudo-elements ::  */
+
+/* ul li::after {
+    content: '-';
+    background: red;
+    color: azure;
+    display: block;
+}
+ */
+
+ /* p::first-letter {
+     font-size: 50px;
+     display: block;
+     float: left;
+     margin: 0 10px 10px 0;
+ } */
+
+ /* 
+ especificidade dos elementos.
+ ID     claseses, atributos e pseudo-classe     elementos e pseudo-elementos
+ 1         0                                                 0   
+ 0         1                                                 0
+ 1         1                                                 0                 
+ */
+/* 
+Regra de aplicação  /
+especificidade     V  
+empate
+style - gannha da especificadee do empate
+!important : para afirmar que a seleção é importante
+forçando o navegador a atribuir aquuela seleção
+
+*/

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background: rgba(0, 0, 0, 0.5);
+        }
+        /*  a fonte -apple-system pega todas as fonte , masi ultizada normalmente */
+          nav  a{
+             color: white;
+             text-decoration: none;
+             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+             padding:  10px 20px ;
+             display: block;
+             text-transform: uppercase;   
+         }
+
+         nav a:hover{
+             background: rgba(0,0, 0, 0.1);
+         }
+         nav {
+             display: flex;
+             /* justify-content: center;  não é necessario */
+             align-items: center;
+
+            }
+         nav ul {
+             display: flex;
+             list-style: none;
+             margin-left: 10px;
+         }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+    <!-- lista que não é ordenada -->
+    <ul type="circle">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!-- Listas ordenadas , type para mostra o tipo de lista
+    e o start para qual numero ele deve começar -->
+    <ol type="1" start="10">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+    <!-- Descrisção de lista dl  -->
+    <dl>
+        <dt>Café</dt>
+        <dd>Bebida preta quente</dd>
+        <dt>Café</dt>
+        <dd>Bebida preta quente</dd>
+    </dl>
+</body>
+</html>

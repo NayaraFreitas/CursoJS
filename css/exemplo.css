@@ -1,0 +1,65 @@
+/* .texto {
+    /* display: block; */
+    /* width: 50%; 
+}*/
+
+
+/* .texto {
+    height: 200px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    min-width: 0;
+    min-height: 100px;
+    margin: 0 auto 50px auto;
+    padding: 50px;
+    border: 5px solid black;
+    overflow: auto;
+    box-sizing: content-box;
+
+} */
+/*  tipos de altura e largura
+min-height e min-width e max - h e w 
+posso mater o width e height nomarl e colocar o min e max , como uma
+opção de responsividade*/
+
+/* tipos de border
+solid , groove ...   */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ /* tipos de display , block, inline
+ inline-block, grid , flex */
+.grid::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ .grid .col {
+    width: 33.33%;
+    height: 300px;
+    background: red;
+    margin: 20px;
+    float:left;
+}
+
+@media all and (max-width: 320px){
+    .grid .col{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 321px) and (max-width : 780px){
+    .grid .col {
+        width: 50%;
+    }
+}
+
+
+/* p {
+    clear: both;
+} */

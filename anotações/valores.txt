@@ -1,0 +1,3 @@
+Valores primitivos são imutaveis isso que dizer que não podemos mudar eles 
+Primitivos - string, number, boolean, underfined, null (bigint, simbol)
+

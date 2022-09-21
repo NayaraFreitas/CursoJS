@@ -11,7 +11,7 @@ vai sair = Um "texto"
 ------------------------
 Cada caractere tem um indice
 
-             01234567
+         01234567
 exep:   "Um texto"
 
 ---Posso direcionar para aparecer um caractere pelo indice--- usando 

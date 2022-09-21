@@ -5,11 +5,11 @@ separar por tipos , se for nomes só nomes , melhor para se identificar, mas pod
 
 as string são indexsadas - tem indices
 
-		  0123456
+		             0123456
 exemp: const nome = 'Nayara'
 
 os arrays tambem são indexsados para são diferentes, são por elementos
-                                           0          1             2
+                        0        1          2
 exemp:const alunos = ['Luiz','Nayara', 'Maria']
 
 
@@ -95,7 +95,7 @@ acessar um indice que não existe - o javascript mostrará o valor undefined
 
 adicionar mais dois e fatiar
 
-//                             0          1            2            3          4
+//               0          1        2         3         4
 const alunos = ['Luiz', 'Nayara', 'João']; // Luiza, Eduardo
 alunos.push('Luiza');
 alunos.push('Eduardo');

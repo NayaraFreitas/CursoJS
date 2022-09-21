@@ -23,7 +23,7 @@ Freitas
 -------------------------------------------------------------
 criando objetos com function - facilita a vida- 
 
-		        --parametro--
+		                  |--parametro--|
 function criaPessoa (nome, sobrenome, idade) {
     return {
         nome: nome,
@@ -31,7 +31,7 @@ function criaPessoa (nome, sobrenome, idade) {
         idade: idade
     };
 }
-			-argumento-
+			                   |-argumento-|
 const pessoa1 = criaPessoa ('Luiz', 'Otavio', 25);
 console.log(pessoa1.nome);
 

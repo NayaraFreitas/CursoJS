@@ -69,7 +69,7 @@ console.log(Math.PI);
 ------------------------------------------------------------
 Potencia  .pow
 
-console.log(Math.pow(2, 10); - 2 elevado a 10
+console.log(Math.pow(2, 10)); - 2 elevado a 10
  
 com o operador  é **
 console.log(2 ** 10);

@@ -21,7 +21,7 @@ body {
     max-height: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-column: repeat(auto-fill,minmax(320px));
+    grid-template-columns: repeat(auto-fill,minmax(320px));
 
     gap: 30px ; /*espaçamento*/
 }

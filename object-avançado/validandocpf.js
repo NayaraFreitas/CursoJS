@@ -18,8 +18,42 @@ Se o numero digito for maior que 9, consideramos 0,
 705.484.450-52  === 705.484.450-52
 */
 
-let cpf = '705.484.450-52';
+/*let cpf = '705.484.450-52';
 let cpfLimpo = cpf.replace(/\D+/g, '');
 cpfArray = Array.from(cpfLimpo);
-console.log(cpfArray.reduce((ac, val) => ac + Number(val), 0 ));
+console.log(cpfArray.reduce((ac, val) => ac + Number(val), 0 ));*/
 
+function ValidaCPF(cpfEnviado) {
+    Object.defineProperty(this, 'cpfLimpo', {
+        enumerable: true,
+        get: function() {
+            return cpfEnviado.replace(/\D+/g, '');
+        } 
+    });
+}
+
+ValidaCPF.prototype.valida = function() {
+    if (typeof this.cpfLimpo === 'undefined') return false;
+    if (this.cpfLimpo.lenght !== 11) return false;
+
+    const cpfParcial = this.cpfLimpo.slice(0, -2);
+    const digito1 = this.criaDigito(cpfParcial);
+
+    return true;
+};
+
+ValidaCPF.prototype.criaDigito = function(cpfParcial){
+    const cpfArray = Array.from(cpfParcial);  
+
+    let regressivo = cpfArray.length + 1;
+    let digito = cpfArray.reduce((ac , val) => {
+        ac += (ac * Number(val));
+        regressivo--;
+        return ac;
+    },0);
+
+    console.log(digito);
+}
+
+const cpf = new ValidaCPF('705.484.450-52');
+console.log(cpf.valida());

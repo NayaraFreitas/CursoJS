@@ -1,0 +1,25 @@
+Can I use --
+o site mostra se certas (funções, variaveis, condições) do javascript funciona ou não  em navegadores antigos 
+
+----
+
+Se algo do javascript  que você viu no can i use , que não funciona em navegadores antigos use o babel para ajudar na tradução e compilação para resolver isso
+
+----
+BABEL é um transpilador
+ele é tradutor e compilador de código
+
+
+---------------------------
+
+Na pasta main.js vai mostra o babel convertendo o código
+usei o npm para puxar o babel 
+npm install --save-dev @babel/cli @babel/preset-env @babel/core
+
+para usar o babel 
+npx babel main.js -o bundle.js --presets=@babel/env (ele criou um arquivo bundle.js, já com as funções do navegaores antigos)
+
+cada atualização que for necessario  para que não precise anciona no npm o babel para criar outra pasta , foi necessário escreve uma linha no package.json para uqe o babel vai atualização a cada escrita de código .
+para que isso funcione e acionado no npm com (npm run babel) ai fica rodando e ele fica assitindo o que estaos fazendo com o código
+
+(O babel, não tão utilizo assim sozinho)

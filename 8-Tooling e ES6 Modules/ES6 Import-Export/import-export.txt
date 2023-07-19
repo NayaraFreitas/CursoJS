@@ -1,0 +1,40 @@
+export - exportar de um arquivo para outro 
+import - importa de uma arquivo para outro
+
+para ocorrer isso
+ coloca o exporta no arquivos que voce queria exporta e o import no arquivo qeu vá importa as informação daquele que está com export , as variaveis tem que ter o mesmo nome e o diretório ('./modulo') 
+ caso alguma variaveis tenha o memso nome qeu alguam variaveia ja existente no arquivo e so usa o as (nome as nome2)
+
+
+(o que usam mais e o export direto)
+
+--exemplos de escrever export
+|\
+| 1- export {nome , sobremo ...}
+|
+|  POSSO COLOCAR O EXPORT ANTES DE UM CONST OU FUNÇÃO que ele irá exportar do memso jeito(export direto)
+|\ 2- export const nome = 'NAYARA'; 
+|
+|   POSSO USAR O DEFAULT para não presicar usar o nome da variavel
+|\ 3-export default function soma(){}
+|
+|  NÃO TEM COMO COLOCAR DEFAULT ANTES DE UMA CONST pois da erro então usa o default 
+|  se for usar o export em uma linha
+|\4- export{ nome as default , sobrenome..}
+
+
+
+
+--exemplos de import 
+|\
+| 1- import {nome , sobrenome} from './modulo1';
+|
+|     POSSO IMPORTA TUDO DE UMA VEZ com o *
+| \ 2- import * as MeuModulo from './modulo1'
+|
+|   SE EXISTIR DEFAULT NO EXPORT o import pode ficar assim (com nome que deseja)
+|   sempre importa sem chave esta importando o default 
+|\ 3-import qualquerNome from './modulo1'
+|
+|   CASO TENHA UM export default e export normal pode importa assim
+|\4-import multiplica, {nome, sobrenome} from './modulo1'

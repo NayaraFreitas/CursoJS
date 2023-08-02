@@ -1,0 +1,17 @@
+Para trabalhar com modulos ,com WEBPACK
+
+precisa instalar algumas dependencias
+
+primeiro faça o npm init -y
+
+depois instalar o babel e o WEBPACK
+
+npm i --save-dev @babel/preset-env @babel/core @babel/cli babel-loader webpack webpack-cli regenerator-runtime core-j@2
+
+--------------------
+
+o WEBPACk trabalhar em modulos ()
+
+---------------------
+
+Usando o Modelo de teste como o Webpack

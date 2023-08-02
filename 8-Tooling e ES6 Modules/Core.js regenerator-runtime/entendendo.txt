@@ -1,0 +1,6 @@
+Como corrigir problemas de recursos mais novos em navegadores mais antigos
+
+para fazer em navegadores masi antigos alem de usar o babel para transcopilar o JS
+usou se o runtime e core-JS
+
+então tem que importa o runtime e o corejs no arquivo js 

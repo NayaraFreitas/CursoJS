@@ -1,0 +1,12 @@
+File system = Sistema de arquivos
+
+Ele tem função assincrona e sincrona
+
+----------
+const fs = require('fs').promises; -- requeri o file system com promise
+const path = require('path'); -- requeri o path
+
+fs.readdir(path.resolve(__dirname))    --utilizando para ver os arquivos de forma assincrona
+
+    .then(files => console.log(files))  <-- e do promise 
+    .catch(e => console.log(e));    <- do promise

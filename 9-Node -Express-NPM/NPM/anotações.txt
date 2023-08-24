@@ -1,0 +1,45 @@
+NPM - gerenciador de pacotes 
+
+---Testando como exemplo Express---
+npm install express - para instalar o pacotes
+
+npm install express -E  - para informar que a versião não precisará ser atualizada , quando surgir uma nova versão ('^4.18.2') <-- com acento mostra que atualizará | sem acento não atualizará--->('4.18.2') 
+
+
+-- Como mudar uma dependencia para desenvolvimento
+ npm install express --save-dev
+
+npm install express -save-prod  --> para voltar para dependencias (produção)
+
+
+----Para informar qual versão eu quero
+
+npm install express@2.1.0
+
+
+---------Versões
+https://imasters.com.br/codigo/versionamento-semantico-o-que-e-e-como-usar <--Explicação
+
+^ - mexe no minor e patch
+~ - mexe no patch
+
+2.        1.      0
+major    minor    patch
+
+
+
+--------Para desinstalar o pacote
+npm uninstall express
+
+
+
+------Para listar os pacotes
+npm ls -- esse mostaria todas, sem profundiade
+
+npm ls --depath=0 - para mostra so oq instalou
+
+---
+
+npm outdated  - para falar qual os pacotes estão desatualizados
+
+npm update - para atualizar as versões

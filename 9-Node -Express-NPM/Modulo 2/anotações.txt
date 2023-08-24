@@ -1,0 +1,23 @@
+Como navegar entre pastas
+                   entra no modulo dois/pasta b /pasta c/pasta d /arquivo mode2  
+const cachorro = require('../Modulo 2  /b        /c      /d     /mode2')
+                            posso colocar do b em diante  ./b/c/d/mode2
+
+
+para frente usar o ponto (.) e a barra (/) para acessar a pasta - para frente referente a pasta que está
+
+usar dois (..) para sair da pasta que está
+
+---------------------------
+
+//variaveis internar dentro do modulo  -- caminho absoluto 
+//console.log(__filename); //nome do arquivo atual
+//console.log(__dirname); //nome da pasta atual
+
+---------------------------
+
+Como manipular caminhos  com path
+
+eu quero navegar mais não sei qual sistema ele vai rodar
+
+console.log(path.resolve(__dirname, '..', '..', 'arquivos', 'imagens')); // caminhando pelas pastas

@@ -1,0 +1,14 @@
+Criando um servidor Web com express js
+
+iniciar npm init -y
+intalar express - npm install express
+
+----------------
+
+Usando nodemon para facilitar - pra atualizar o localhost sozinho toda vez que algo for salvo e precisa ter que iniciar server e parar para atualizar
+
+npm install nodemon --save-dev -> para por no dev-dependencies
+
+--
+Para rodar na mão 
+npx nodemon server.js

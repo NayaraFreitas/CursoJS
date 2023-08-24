@@ -1,14 +1,10 @@
 const express = require('express'); // pra carregar o express
 const app = express();   /// -------^
 
-//      /  CRIAR    LER   ATUALIZAR   APAGAR
-//CRUD - CREATE - READ - UPDATE -   DELETE
-//      \  POST     GET     PUT      DELETE
+//http://facebook.com/profiles/12345?campanha=googleleads&nome_campanha=sheila
 
-//Rotas na aplicação  e é isso que o expressa vai ajudar a resolver
-//http://meusite.com/ <-GET -> Entregue a página /
-//http://meusite.com/SOBRE <-GET -> Entregue a página / SOBRE
-//http://meusite.com/contato <-GET -> Entregue a página / contato
+
+app.use(express.urlencoded({extend: true})); // para tratar o req.body - senão parecerar undefind
 
 //  a requisição e a resposta 
 app.get('/', (req, res) => { 
@@ -20,8 +16,18 @@ app.get('/', (req, res) => {
     `);
 });
 
+app.get('/testes/:idUsuarios?/:parametro?' , (req, res) => {
+    // /profile/3 - parametro
+    // /profile/?chave=1=valor1&chave2=valor2 - query
+    console.log(req.params); 
+    console.log(req.query);
+    res.send(req.query.facebookprofile);
+});
+
 app.post('/' , (req,res) => {
-    res.send('Recebi o formulário');
+    // 
+    console.log(req.body);
+    res.send(`Oque você me enviou foi : ${req.body.nome}`);
 })
 
 app.get('/contato', (req,res) => {

@@ -9,7 +9,7 @@ console.log(123456, 15.85); // não precisa de aspas nos números , so se precis
 
 
 ////////////////////////aula 28 string/////////
-                 01234567    
+                //  01234567    
 //let umaString = "Um texto";
 
 //console.log(umaString)

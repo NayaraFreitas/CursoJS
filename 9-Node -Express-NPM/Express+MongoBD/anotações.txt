@@ -4,6 +4,7 @@ iniciar npm init -y
 intalar express - npm install express
 
 ----
+21/05/2024
 
 Middlewares
  
@@ -72,7 +73,25 @@ exports.trataPost = (req, res, next) => {
 Agora todas a rotas que foram criadas no middleware passaram pelo o server.js
 
 
+
+
+------- 22/05/2024
 senha do mongobd
 DiNH2VOKpxuLvFGO
 
 mongodb+srv://nayarafreitas:DiNH2VOKpxuLvFGO@cursojs1.gtx3niy.mongodb.net/meuBancoDeDados?retryWrites=true&w=majority&appName=CursoJS1
+
+
+----Dependencia do projeto
+// Melhor pratica de programção não deixa a senha publica e dados do servidor
+tem que instalar o dotenv para administrar isso
+
+ele vai criar variaveis
+
+npm install dotenv
+
+--
+outra coisa e o mongoose ele fica reponsavel por modular e trartar o esquema( ele tambem que vai fazer a coneão com a base de dados)
+
+--
+usar o dot env para ocultar o servidor

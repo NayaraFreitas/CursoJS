@@ -1,0 +1,72 @@
+Criando um servidor Web com express js
+
+iniciar npm init -y
+intalar express - npm install express
+
+----
+
+Middlewares
+ 
+--routes.js--
+O express ele é inteiro em middlewares
+const express = require('express');
+const route = express.Router();
+const homeController = require('./src/controllers/homeController')
+const contatoController = require('./src/controllers/contatoController')
+
+function meuMiddleware(req, res, next){ //1- tem que ter o next ´para poder chamar as requisiçoes ,senão ele não passa
+
+
+    //jogar (atrelando)algo dentro da requisição - salvação informaçções do cliente em sessões - algo que é possivel fazer em banco de dadso tbm
+    req.session = {nome: 'Nayara', sobrenome: 'Freitas'} // joguei no HomeController
+    //---
+    console.log();
+    console.log('Passei no seu middleware');
+    console.log();
+
+    next(); // 2-tem que chamar o next como função para poder funcionar - ou seja pra poder parar as requisições , senao a pagina fica só carregando e não para
+}
+
+//rotas da home // Middleware - colocar uma função antes de responder o cliente(homeController)
+route.get('/',meuMiddleware,  homeController.paginaInicial, (function(req,res,next){
+    console.log();
+    console.log('Ainda estou aqui...')
+    console.log(`'ultimoMiddleware' Olha oque tem na req.session.nome${req.session.nome}`)
+
+}));
+
+
+route.post('/' , homeController.trataPost);
+
+// Rotasd de contato
+route.get('/contato', contatoController.paginaInicial)
+
+
+module.exports = route;
+
+--homeController.js---
+exports.paginaInicial = (req, res, next) => { // next é o proximo middleware a ser executado (ele é um middleware tbm)
+    console.log('Respondendo o cliente')
+        res.render('index');
+
+    console.log(`'páginaInicial' Olha oque tem na req.session.nome${req.session.nome}`)
+
+    //return;  em vez de usar a função next , so com return para mostrar que requisão acaba aqui(explicação no routes.js)
+
+
+
+    //Posso tbm manter o next e adicionar um função após ele para enviar ao cliente algo a mais
+    next();
+}
+
+exports.trataPost = (req, res, next) => {
+    res.send('Sou sua nova rota de Posts')
+};
+
+
+*//Middleware são podesos pq posso fazer coisas no meio do caminho, ou nates de reposnsder o cliente ou depois
+
+
+--------
+
+Agora todas a rotas que foram criadas no middleware passaram pelo o server.js
